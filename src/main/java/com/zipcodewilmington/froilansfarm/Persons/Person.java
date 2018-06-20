@@ -1,4 +1,4 @@
-package com.zipcodewilmington.froilansfarm;
+package com.zipcodewilmington.froilansfarm.Persons;
 
 public class Person /*implements Eater, NoiseMaker*/{
    private String name;

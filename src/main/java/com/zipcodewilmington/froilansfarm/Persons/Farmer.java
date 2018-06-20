@@ -1,4 +1,4 @@
-package com.zipcodewilmington.froilansfarm;
+package com.zipcodewilmington.froilansfarm.Persons;
 
 public class Farmer extends Person /* implements Botanist, Rider */ {
     private boolean riding;
