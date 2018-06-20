@@ -27,14 +27,14 @@ public class Tractor extends Vehicle implements FarmVehicle {
         super.isRidden = true;
     }
 
-    public ArrayList<Edible> harvest(/*CropRow cropRow*/){
-        ArrayList<Edible> theHarvest = new ArrayList<Edible>();
-
-        for(Crop c: /*cropRow*/){
-            if(c instanceof Edible){
-                theHarvest.add(c);
-            }
-        }
-        return theHarvest;
+//    public ArrayList<Edible> harvest(/*CropRow cropRow*/){
+//        ArrayList<Edible> theHarvest = new ArrayList<Edible>();
+//
+//        for(Crop c: /*cropRow*/){
+//            if(c instanceof Edible){
+//                theHarvest.add(c);
+//            }
+//        }
+//        return theHarvest;
     }
-}
+

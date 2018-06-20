@@ -1,7 +1,7 @@
 package com.zipcodewilmington.froilansfarm.Interfaces;
 
 public interface Rider {
-    void mount();
-    void dismount();
-    void ride();
+    void mount(Rideable ride);
+    void dismount(Rideable ride);
+    void ride(Rideable ride);
 }
