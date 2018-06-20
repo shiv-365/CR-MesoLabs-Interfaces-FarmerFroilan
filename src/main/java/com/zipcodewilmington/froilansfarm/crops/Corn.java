@@ -1,7 +1,18 @@
 package com.zipcodewilmington.froilansfarm.crops;
 
+import com.zipcodewilmington.froilansfarm.Interfaces.Edible;
+
 public class Corn extends Crop {
-    public void Edible<E> yield() {
-        Edible corn = (Edible) new Corn();
+    public Edible yield() {
+        Edible corn = new Corn();
+        return corn;
+    }
+
+    public boolean isEdible() {
+        return false;
+    }
+
+    public Object yield(com.zipcodewilmington.froilansfarm.Interfaces.Edible e) {
+        return null;
     }
 }
