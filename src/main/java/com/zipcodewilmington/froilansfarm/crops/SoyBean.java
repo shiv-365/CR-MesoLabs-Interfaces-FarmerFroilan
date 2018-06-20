@@ -12,8 +12,4 @@ public class SoyBean extends Crop {
         return false;
     }
 
-
-    public Object yield(Edible e) {
-        return null;
-    }
 }

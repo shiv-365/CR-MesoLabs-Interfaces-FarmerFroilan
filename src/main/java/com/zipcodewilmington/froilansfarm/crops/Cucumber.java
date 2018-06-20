@@ -12,7 +12,4 @@ public class Cucumber extends Crop {
         return false;
     }
 
-    public Object yield(Edible e) {
-        return null;
-    }
 }

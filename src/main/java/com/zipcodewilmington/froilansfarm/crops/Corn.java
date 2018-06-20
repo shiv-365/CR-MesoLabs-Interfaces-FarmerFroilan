@@ -12,7 +12,4 @@ public class Corn extends Crop {
         return false;
     }
 
-    public Object yield(com.zipcodewilmington.froilansfarm.Interfaces.Edible e) {
-        return null;
-    }
 }
