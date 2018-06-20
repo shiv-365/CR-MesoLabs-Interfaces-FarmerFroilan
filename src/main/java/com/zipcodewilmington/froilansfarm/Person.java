@@ -12,7 +12,7 @@ public class Person /*implements Eater, NoiseMaker*/{
 
 
     }
-    public String makeNoise(){
+    public String makesNoise(){ //not same as NoiseMaker implementation
 
         return null;
     }
