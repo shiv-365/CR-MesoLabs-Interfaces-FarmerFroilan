@@ -11,7 +11,7 @@ import java.util.HashMap;
 import java.util.TreeMap;
 
 public class Farmhouse {
-    TreeMap<String, Person> residents = new TreeMap<String, Person>();
+    ArrayList<Person> residents = new ArrayList<Person>();
     HashMap<String, ArrayList<Object>> fridge= new HashMap<String, ArrayList<Object>>();
     Person froilan= new Farmer("Froilan");
     Person froilanda= new Pilot("Froilanda");
@@ -25,20 +25,24 @@ public class Farmhouse {
         fridge.put("Tomatoes", new ArrayList<Object>());
         fridge.put("Potatoes", new ArrayList<Object>());
 
-        residents.put("Froilan", froilan);
-        residents.put("Froilanda", froilanda);
+        residents.add(froilan);
+        residents.add(froilanda);
     }
 
-    public Person getPerson(String name){
-        return residents.get(name);
+    public Person getPerson(int idx){
+        return residents.get(idx);
     }
 
-    public void setPerson(String name, Person p){
-        residents.put(name, p);
+    public void setPerson(Person p){
+        residents.add(p);
     }
 
-    public void removePerson(String name){
-        residents.remove(name);
+    public int getResidentSize(){
+        return residents.size();
+    }
+
+    public void removePerson(Person p){
+        residents.remove(p);
     }
 
     public Object getEdible(String name, int numberOf){

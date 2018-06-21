@@ -29,4 +29,7 @@ public class Chicken extends Animal implements Produce {
         hasBeenFertilized = true;
     }
 
+    public boolean isHasBeenFertilized() {
+        return hasBeenFertilized;
+    }
 }
