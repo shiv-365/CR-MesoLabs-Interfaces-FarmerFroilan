@@ -1,8 +1,9 @@
 package com.zipcodewilmington.froilansfarm.Persons;
 
-import com.zipcodewilmington.froilansfarm.Persons.Person;
+import com.zipcodewilmington.froilansfarm.Interfaces.Flys;
+import com.zipcodewilmington.froilansfarm.Interfaces.Rider;
 
-public class Pilot extends Person /*implements Flys, Rider*/ {
+public class Pilot extends Person implements Rider, Flys {
    private boolean riding;
    private boolean flying;
 
@@ -12,11 +13,25 @@ public class Pilot extends Person /*implements Flys, Rider*/ {
         this.riding = false;
     }
 
-    public void fly(Object a){ //replace Object with Aircraft object
-
+    public void fly(Object a){
+        flying = true;
 
     }
 
+    public void stopFlying(Object a){
+        flying = false;
 
+    }
+    public void ride(Object a){
+        riding = true;
+
+    }    public void stopRiding(Object a){
+        flying = false;
+
+    }
+
+    public String makeNoise(){
+        return "Vroom Vroom!";
+    }
 
 }
