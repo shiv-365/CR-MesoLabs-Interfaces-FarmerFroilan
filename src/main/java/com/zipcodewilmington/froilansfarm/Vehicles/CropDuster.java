@@ -3,6 +3,11 @@ package com.zipcodewilmington.froilansfarm.Vehicles;
 import com.zipcodewilmington.froilansfarm.Farm.CropRow;
 import com.zipcodewilmington.froilansfarm.Farm.Farm;
 import com.zipcodewilmington.froilansfarm.Interfaces.FarmVehicle;
+import com.zipcodewilmington.froilansfarm.crops.Crop;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.TreeMap;
 
 public class CropDuster extends Aircraft implements FarmVehicle {
 
@@ -25,7 +30,7 @@ public class CropDuster extends Aircraft implements FarmVehicle {
         operate();
         this.flying = true;
         this.hasPilot = true;
-        this.isRidden = true;
+        ridden();
         super.makeNoise();
     }
 
@@ -33,12 +38,13 @@ public class CropDuster extends Aircraft implements FarmVehicle {
         this.operating = true;
     }
 
-    public void fertilize( Farm.field){
-
-
-        for(CropRow cR : ){
-
+    public void fertilize(TreeMap<Crop, CropRow> field){
+        Collection<CropRow> crops = field.values();
+        for(CropRow c : crops){
+             ArrayList<Crop> tempCrop = c.getCropRow();
+             for(Crop crop: tempCrop){
+                 crop.fertilized();
+             }
         }
-
     }
 }

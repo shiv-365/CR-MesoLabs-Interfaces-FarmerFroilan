@@ -11,9 +11,4 @@ public class Farm {
     ArrayList<stable> horseyFarm = new ArrayList<stable>();
     ArrayList<chickenCoop> chickenCity = new ArrayList<chickenCoop>();
 
-    public TreeMap<Crop, CropRow> getField() {
-        return field;
-    }
-
-
 }

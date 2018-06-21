@@ -20,7 +20,5 @@ public class CropRow {
         this.cropRow = cropRow;
     }
 
-    public Object[] crops(){
-        return cropRow.toArray();
-    }
+
 }
