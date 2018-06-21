@@ -1,21 +1,34 @@
 package com.zipcodewilmington.froilansfarm.Persons;
 
-public class Person /*implements Eater, NoiseMaker*/{
-   private String name;
+import com.zipcodewilmington.froilansfarm.Interfaces.Eater;
+import com.zipcodewilmington.froilansfarm.Interfaces.NoiseMaker;
+
+public class Person implements Eater, NoiseMaker {
+    private String name;
+
+
+    public String getName() {
+        return name;
+    }
+
 
 
     public Person(String name){
         this.name = name;
 
     }
-    public void eat(Object e){ // change to Edible e
-
-
-    }
+//    public void eat(Object e){
+//        fridge.remove(e.getName(),  )
+//
+//
+//    }
     public String makesNoise(){ //not same as NoiseMaker implementation
 
         return null;
     }
 
+    public void dismount(){
+        riding = false;
+    }
 
 }

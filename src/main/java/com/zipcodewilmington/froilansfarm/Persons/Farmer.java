@@ -1,7 +1,12 @@
 package com.zipcodewilmington.froilansfarm.Persons;
 
-public class Farmer extends Person /* implements Botanist, Rider */ {
+import com.zipcodewilmington.froilansfarm.Interfaces.Botanist;
+import com.zipcodewilmington.froilansfarm.Interfaces.Rideable;
+import com.zipcodewilmington.froilansfarm.Interfaces.Rider;
+
+public class Farmer extends Person  implements Botanist, Rider {
     private boolean riding;
+    private boolean mounted;
 
     public Farmer(String name) {
         super(name);
@@ -12,15 +17,25 @@ public class Farmer extends Person /* implements Botanist, Rider */ {
 
     }
 
-    public void ride(Object r){ //replace Object with Rideable
+    public void ride(Rideable r){
 
-        riding = false;
+        riding = true;
 
     }
 
-    public void easeThePain(Object b){ //replace Object with Beer
+    public void mount(Rideable r){
 
+        mounted = true;
 
+    }
+    public void dismount(Rideable r){
+
+        mounted = false;
+
+    }
+
+    public String makeNoise(){
+        return "I'm a farmer, I farm!";
     }
 
 }
