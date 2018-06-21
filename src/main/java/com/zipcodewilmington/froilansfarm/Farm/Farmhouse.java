@@ -37,8 +37,12 @@ public class Farmhouse {
         residents.add(p);
     }
 
-    public void removePerson(String name){
-        residents.remove(name);
+    public int getResidentSize(){
+        return residents.size();
+    }
+
+    public void removePerson(Person p){
+        residents.remove(p);
     }
 
     public Object getEdible(String name, int numberOf){

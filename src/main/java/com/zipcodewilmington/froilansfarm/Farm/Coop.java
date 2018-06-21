@@ -15,11 +15,13 @@ public class Coop {
         this.name = name;
 
     }
+    public Coop(){}
 
     public Chicken getChicken(){
 
         return chick;
     }
+
 
     public void setName(String name){
 
@@ -32,7 +34,6 @@ public class Coop {
 
     }
     public void addChicken(){
-
 
         oneCoop.put(name,chick);
     }

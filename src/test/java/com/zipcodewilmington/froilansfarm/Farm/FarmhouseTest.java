@@ -28,14 +28,25 @@ class FarmhouseTest {
 
     @org.junit.jupiter.api.Test
     void removePerson() {
+        Farmhouse f = new Farmhouse();
+        Person p = new Person("person1");
+        f.setPerson(p);
+        f.removePerson(p);
+        int actual = f.getResidentSize();
+        int expected = 2;
+        assertEquals(expected, actual);
     }
 
     @org.junit.jupiter.api.Test
     void getEdible() {
+        Farmhouse f = new Farmhouse();
+
     }
 
     @org.junit.jupiter.api.Test
     void setEdible() {
+        Farmhouse f = new Farmhouse();
+
     }
 
     @org.junit.jupiter.api.Test
