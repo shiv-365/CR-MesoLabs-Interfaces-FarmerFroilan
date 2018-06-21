@@ -31,4 +31,8 @@ public class Person implements Eater, NoiseMaker {
     public String makeNoise() {
         return "I'm Batman";
     }
+
+    public void eat(Object e) { //what is this bullshit
+
+    }
 }
