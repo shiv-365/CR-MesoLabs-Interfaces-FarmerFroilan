@@ -24,9 +24,11 @@ public class Horse extends Animal implements Rideable {
         } else System.out.println( "Sorry this horse is currently unavailable to ride");
     }
 
-    public void eat(Object e){
-        if(e instanceof Edible){
-            System.out.println("NOM NOM NOM");
-        } else System.out.println("THIS IS NOT FOOD!");
+    public void eat(Object[] e){
+        for(Object o: e) {
+            if (o instanceof Edible) {
+                System.out.println("NOM NOM NOM");
+            } else System.out.println("THIS IS NOT FOOD!");
+        }
     }
 }
