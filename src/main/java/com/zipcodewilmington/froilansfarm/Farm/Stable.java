@@ -5,7 +5,7 @@ import com.zipcodewilmington.froilansfarm.Animals.Horse;
 import java.util.ArrayList;
 
 public class Stable {
-    private Horse horse;
+    private Horse horseys;
     private ArrayList<Horse> oneStable = new ArrayList<Horse>();
 
     public Stable(Horse horse){
@@ -16,13 +16,13 @@ public class Stable {
 
     public Horse getHorse(){
 
-        return horse;
+        return horseys;
     }
 
     public void addHorse(){
 
 
-        oneStable.add(horse);
+        oneStable.add(horseys);
     }
 
 
