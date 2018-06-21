@@ -2,10 +2,14 @@ package com.zipcodewilmington.froilansfarm.Persons;
 
 import com.zipcodewilmington.froilansfarm.Interfaces.Flys;
 import com.zipcodewilmington.froilansfarm.Interfaces.Rider;
+import com.zipcodewilmington.froilansfarm.Interfaces.Rideable;
+import com.zipcodewilmington.froilansfarm.Interfaces.Rider;
+import com.zipcodewilmington.froilansfarm.Persons.Person;
+import com.zipcodewilmington.froilansfarm.Vehicles.Aircraft;
 
-public class Pilot extends Person implements Rider, Flys {
-   private boolean riding;
-   private boolean flying;
+public class Pilot extends Person implements Flys, Rider {
+    private boolean riding;
+    private boolean flying;
 
     public Pilot(String name) {
         super(name);
@@ -13,25 +17,40 @@ public class Pilot extends Person implements Rider, Flys {
         this.riding = false;
     }
 
-    public void fly(Object a){
-        flying = true;
+
+    public void fly(Aircraft a) { //replace Object with Aircraft object
+
 
     }
 
-    public void stopFlying(Object a){
+    public void flying() {
+
+    }
+
+
+    public void stopFlying(Object a) {
         flying = false;
 
     }
-    public void ride(Object a){
-        riding = true;
 
-    }    public void stopRiding(Object a){
+    public void stopRiding(Object a) {
         flying = false;
 
     }
 
-    public String makeNoise(){
+    public String makeNoise() {
         return "Vroom Vroom!";
     }
 
+    public void mount(Rideable ride) {
+
+    }
+
+    public void dismount(Rideable ride) {
+
+    }
+
+    public void ride(Rideable ride) {
+
+    }
 }
