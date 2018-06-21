@@ -2,14 +2,12 @@ package com.zipcodewilmington.froilansfarm.Persons;
 
 import com.zipcodewilmington.froilansfarm.Interfaces.Eater;
 import com.zipcodewilmington.froilansfarm.Interfaces.NoiseMaker;
+import com.zipcodewilmington.froilansfarm.Interfaces.Edible;
+import com.zipcodewilmington.froilansfarm.Interfaces.NoiseMaker;
+
 
 public class Person implements Eater, NoiseMaker {
     private String name;
-
-
-    public String getName() {
-        return name;
-    }
 
 
     public Person(String name) {
@@ -17,18 +15,25 @@ public class Person implements Eater, NoiseMaker {
 
     }
 
+
+    public String getName() {
+        return name;
+    }
+
+
+
 //    public void eat(Object e) {
 //        fridge.remove(e.getName(), )
 //
 //
 //    }
 
-    public String makesNoise() { //not same as NoiseMaker implementation
 
-        return "I'm Batman";
+    public void eat(Edible e) {
+
     }
 
-    public void dismount() {
-        riding = false;
+    public String makeNoise() {
+        return "I'm Batman";
     }
 }
