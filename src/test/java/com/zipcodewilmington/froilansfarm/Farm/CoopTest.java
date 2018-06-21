@@ -10,13 +10,27 @@ class CoopTest {
     @org.junit.jupiter.api.Test
     public void getChicken() {
         Chicken c1 = new Chicken("the jokers \"real name\"");
+
         c.addChicken(c1);
-        assertNotNull(c);
+        c.setName("the jokers \"real name\"");
+        String actual = c.getName();
+        String expected = "the jokers \" real \" name";
+
+        //assertNotNull(c);
+        //assertEquals(expected,actual);
+
 
 
     }
 
     @org.junit.jupiter.api.Test
     public void addChicken() {
+        Chicken c1 = new Chicken("joker");
+        Chicken c2 = new Chicken("riddler");
+
+        c.addChicken(c1);
+        c.addChicken(c2);
+
+
     }
 }

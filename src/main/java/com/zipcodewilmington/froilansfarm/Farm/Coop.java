@@ -9,9 +9,9 @@ public class Coop {
     private Chicken chick;
     private String name;
     private TreeMap<String,Chicken> oneCoop = new TreeMap<String,Chicken>();
-    public Coop(String name, Chicken chick){
+    public Coop(String name){
 
-        this.chick = chick;
+        //this.chick = chick;
         this.name = name;
 
     }
@@ -33,7 +33,7 @@ public class Coop {
         return name;
 
     }
-    public void addChicken(){
+    public void addChicken(Chicken chick){
 
         oneCoop.put(name,chick);
     }
