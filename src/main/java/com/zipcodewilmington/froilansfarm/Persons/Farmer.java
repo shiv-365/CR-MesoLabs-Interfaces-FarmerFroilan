@@ -1,6 +1,11 @@
 package com.zipcodewilmington.froilansfarm.Persons;
 
-public class Farmer extends Person /* implements Botanist, Rider */ {
+import com.zipcodewilmington.froilansfarm.Interfaces.Botanist;
+import com.zipcodewilmington.froilansfarm.Interfaces.Rideable;
+import com.zipcodewilmington.froilansfarm.Interfaces.Rider;
+import com.zipcodewilmington.froilansfarm.crops.Crop;
+
+public class Farmer extends Person  implements Botanist, Rider {
     private boolean riding;
 
     public Farmer(String name) {
@@ -8,19 +13,25 @@ public class Farmer extends Person /* implements Botanist, Rider */ {
         this.riding = false;
     }
 
-    public void plantCrop(Object c){ //replace Object with Crop
 
-    }
-
-    public void ride(Object r){ //replace Object with Rideable
-
-        riding = false;
-
-    }
-
-    public String easeThePain(Object b){
+    public String easeThePain(){ //need beer class
         return "And I drank until I felt compelled to contact all of my exes on facebook...";
 
     }
 
+    public void plantCrop(Crop crop) {
+
+    }
+
+    public void mount(Rideable ride) {
+
+    }
+
+    public void dismount(Rideable ride) {
+
+    }
+
+    public void ride(Rideable ride) {
+
+    }
 }

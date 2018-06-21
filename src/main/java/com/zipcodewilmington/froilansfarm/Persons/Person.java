@@ -1,6 +1,10 @@
 package com.zipcodewilmington.froilansfarm.Persons;
 
-public class Person /*implements Eater, NoiseMaker*/{
+import com.zipcodewilmington.froilansfarm.Interfaces.Eater;
+import com.zipcodewilmington.froilansfarm.Interfaces.Edible;
+import com.zipcodewilmington.froilansfarm.Interfaces.NoiseMaker;
+
+public class Person implements Eater, NoiseMaker {
    private String name;
 
 
@@ -8,14 +12,18 @@ public class Person /*implements Eater, NoiseMaker*/{
         this.name = name;
 
     }
-    public void eat(Object e){ // change to Edible e
 
-
-    }
     public String makesNoise(){
 
         return "I'm Batman";
     }
 
 
+    public void eat(Edible e) {
+
+    }
+
+    public String makeNoise() {
+        return null;
+    }
 }
