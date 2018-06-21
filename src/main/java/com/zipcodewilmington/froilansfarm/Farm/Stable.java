@@ -10,7 +10,7 @@ public class Stable {
 
     public Stable(Horse horse){
 
-        this.horse = horse;
+        this.horseys = horse;
 
     }
 
