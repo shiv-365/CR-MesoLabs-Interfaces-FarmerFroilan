@@ -31,6 +31,8 @@ class CoopTest {
         c.addChicken(c1);
         c.addChicken(c2);
 
+        assertNotNull(c);
+
 
     }
 }
