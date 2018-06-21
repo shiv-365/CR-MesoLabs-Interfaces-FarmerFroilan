@@ -15,12 +15,13 @@ public class Coop {
 
 
     }
+    public Coop(){}
 
     public Chicken getChicken(){
 
         return chick;
     }
-    public void addChicken(){
+    public void addChicken(Chicken chick){
 
 
         oneCoop.add(chick);
