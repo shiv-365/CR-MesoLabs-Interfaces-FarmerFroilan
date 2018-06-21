@@ -8,7 +8,6 @@ public class Farm {
 
     Farmhouse saison = new Farmhouse();
     TreeMap<Crop, CropRow> field = new TreeMap<Crop, CropRow>();
-    ArrayList<oneStable> horseyFarm = new ArrayList<stable>();
-    ArrayList<chickenCoop> chickenCity = new ArrayList<chickenCoop>();
-
+    ArrayList<Stable> horseyFarm = new ArrayList<Stable>();
+    ArrayList<Coop> chickenCity = new ArrayList<Coop>();
 }
