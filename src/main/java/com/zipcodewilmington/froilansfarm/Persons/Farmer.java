@@ -19,9 +19,8 @@ public class Farmer extends Person /* implements Botanist, Rider */ {
     }
 
     public String easeThePain(Object b){
-        return "And I drank until I felt compelled to contact all of my exes on facebook...\n" +
-                "It did not \" ease the pain.\"" +
-                "Maybe next time.";
+        return "And I drank until I felt compelled to contact all of my exes on facebook...";
+
     }
 
 }
