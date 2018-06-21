@@ -16,9 +16,9 @@ public class Chicken extends Animal implements Produce {
         return "Cluck Cluck Cluck";
     }
 
-    public Edible yield(){
+    public Egg yield(){
         if(hasBeenFertilized != true) {
-            Edible egg = new Egg();
+            Egg egg = new Egg();
             return egg;
         }
 

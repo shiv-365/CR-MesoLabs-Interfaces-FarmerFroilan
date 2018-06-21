@@ -8,6 +8,7 @@ public abstract class Crop implements Produce, Edible {
     boolean hasBeenFertilized = false;
 
     public void fertilized() {
+
         hasBeenFertilized = true;
     }
 

@@ -1,5 +1,7 @@
 package com.zipcodewilmington.froilansfarm.Vehicles;
 
+import com.zipcodewilmington.froilansfarm.Farm.CropRow;
+import com.zipcodewilmington.froilansfarm.Farm.Farm;
 import com.zipcodewilmington.froilansfarm.Interfaces.FarmVehicle;
 
 public class CropDuster extends Aircraft implements FarmVehicle {
@@ -29,5 +31,14 @@ public class CropDuster extends Aircraft implements FarmVehicle {
 
     public void operate(){
         this.operating = true;
+    }
+
+    public void fertilize( Farm.field){
+
+
+        for(CropRow cR : ){
+
+        }
+
     }
 }

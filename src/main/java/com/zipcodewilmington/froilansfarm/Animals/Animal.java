@@ -12,7 +12,10 @@ public abstract class Animal implements Eater, NoiseMaker {
         this.name = name;
     }
 
-    public void eat(Edible e) {
+    public void eat(Object edible) {
+        if(edible instanceof Edible){
+            System.out.println("NOM NOM NOM");
 
+        } else System.out.println("Can't Eat That!");
     }
 }
