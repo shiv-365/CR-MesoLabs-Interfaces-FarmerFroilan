@@ -17,12 +17,6 @@ public class Coop {
     }
     public Coop(){}
 
-    public Chicken getChicken(){
-
-        return chick;
-    }
-
-
     public void setName(String name){
 
         this.name = name;
@@ -33,9 +27,13 @@ public class Coop {
         return name;
 
     }
-    public void addChicken(){
+    public void addChicken(Chicken c){
 
-        oneCoop.put(name,chick);
+        oneCoop.put(name,c);
+    }
+    public Chicken getChicken(){
+
+        return oneCoop.get(chick);
     }
 
 

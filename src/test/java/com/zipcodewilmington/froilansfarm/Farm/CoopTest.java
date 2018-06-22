@@ -5,18 +5,24 @@ import com.zipcodewilmington.froilansfarm.Animals.Chicken;
 import static org.junit.jupiter.api.Assertions.*;
 
 class CoopTest {
-    private Coop c = new Coop();
 
-    @org.junit.jupiter.api.Test
-    public void getChicken() {
-        Chicken c1 = new Chicken("the jokers \"real name\"");
+
+    /*@org.junit.jupiter.api.Test
+    public void testgetChicken() {
+        Coop c = new Coop();
+        Chicken c1 = new Chicken("chicken1");
+        c.setName("chicken1");
         c.addChicken(c1);
-        assertNotNull(c);
-
+        Chicken actual = c.getChicken();
+        Chicken expected = c1;
+        assertEquals(expected,actual);
 
     }
 
     @org.junit.jupiter.api.Test
-    public void addChicken() {
-    }
+    public void testaddChicken() {
+        Coop c = new Coop();
+
+
+    }*/
 }
