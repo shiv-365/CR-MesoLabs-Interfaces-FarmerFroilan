@@ -17,7 +17,7 @@ class CoopTest {
         Chicken expected = c1;
         assertEquals(expected,actual);
 
-    }
+//    }
 
     @org.junit.jupiter.api.Test
     public void testaddChicken() {

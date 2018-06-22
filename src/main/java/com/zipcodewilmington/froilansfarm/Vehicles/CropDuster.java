@@ -41,7 +41,7 @@ public class CropDuster extends Aircraft implements FarmVehicle {
     public void fertilize(TreeMap<Crop, CropRow> field){
         Collection<CropRow> crops = field.values();
         for(CropRow c : crops){
-             ArrayList<Crop> tempCrop = c.getCropRow();
+             Crop[] tempCrop = c.getCropRow();
              for(Crop crop: tempCrop){
                  crop.fertilized();
              }

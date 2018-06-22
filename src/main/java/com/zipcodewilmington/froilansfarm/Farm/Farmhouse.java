@@ -56,15 +56,12 @@ public class Farmhouse {
         return eatMe;
     }
 
-    public void setEdible(String name, Object o){
+    public void setEdible(String name, Object[] o){
         ArrayList<Object> tempFood = fridge.get(name);
-        tempFood.add(o);
+        for(Object food: o){
+            tempFood.add(food);
+        }
+        fridge.replace(name,tempFood);
     }
-
-    public void removeEdible(String name){
-        fridge.remove(name);
-    }
-
-
 
 }

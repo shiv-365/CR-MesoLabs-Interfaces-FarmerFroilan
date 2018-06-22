@@ -6,18 +6,25 @@ import java.util.ArrayList;
 
 public class CropRow {
 
-  ArrayList<Crop> cropRow;
+  Crop[] cropRow;
 
-    public CropRow(ArrayList<Crop> cropRow) {
-        this.cropRow = cropRow;
+    public CropRow() {
+        this.cropRow = new Crop[15];
     }
 
-    public ArrayList<Crop> getCropRow() {
+    public Crop[] getCropRow() {
         return cropRow;
     }
 
-    public void setCropRow(ArrayList<Crop> cropRow) {
+    public void setCropRow(Crop[] cropRow) {
         this.cropRow = cropRow;
     }
 
+    public int cropRowSize(){ return cropRow.length;}
+
+    public void plantCrop(Crop crop){
+        for(int i = 0; i < 15; i++) {
+            cropRow[i] = crop;
+        }
+    }
 }

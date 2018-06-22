@@ -23,10 +23,6 @@ public class AnimalTest {
         System.setOut(new PrintStream(outContent));
     }
 
-    @After
-    public void restoreStreams() {
-        System.setOut(originalOut);
-    }
 
     @Test
     public void eat() {
@@ -38,5 +34,10 @@ public class AnimalTest {
     public void eat1() {
         testAnimal.eat(badFood);
         assertEquals(outContent.toString(),"THIS IS NOT FOOD!");
+    }
+
+    @After
+    public void restoreStreams() {
+        System.setOut(originalOut);
     }
 }
