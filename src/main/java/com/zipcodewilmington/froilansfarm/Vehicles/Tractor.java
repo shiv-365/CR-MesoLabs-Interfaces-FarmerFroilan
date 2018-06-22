@@ -31,11 +31,12 @@ public class Tractor extends Vehicle implements FarmVehicle {
     public ArrayList<Object> harvest(CropRow cropRow) {
         ArrayList<Object> theHarvest = new ArrayList<Object>();
 
-        ArrayList<Crop> tempCrop = cropRow.getCropRow();
-        for(Crop crop: tempCrop){
-            if(crop instanceof Edible){
-            theHarvest.add(crop);}
-        }return theHarvest;
+        Object[] tempCrop = cropRow.getCropRow();
+        for(Object o: tempCrop) {
+            if (o instanceof Edible) {
+                theHarvest.add(o);
+            }
+        } return theHarvest;
     }
 }
 

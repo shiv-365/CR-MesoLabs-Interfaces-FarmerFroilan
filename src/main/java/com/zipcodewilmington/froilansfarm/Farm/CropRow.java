@@ -20,9 +20,11 @@ public class CropRow {
         this.cropRow = cropRow;
     }
 
-//    public void plantCrop(Crop crop){
-//        for(int i = 0; i < 15; i++) {
-//            cropRow[i] = crop;
-//        }
-//    }
+    public int cropRowSize(){ return cropRow.length;}
+
+    public void plantCrop(Crop crop){
+        for(int i = 0; i < 15; i++) {
+            cropRow[i] = crop;
+        }
+    }
 }
