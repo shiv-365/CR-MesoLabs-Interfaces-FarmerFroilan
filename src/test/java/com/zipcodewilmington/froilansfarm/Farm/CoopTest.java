@@ -27,17 +27,5 @@ class CoopTest {
 
 
     }*/
-=======
-    public void addChicken() {
-        Chicken c1 = new Chicken("joker");
-        Chicken c2 = new Chicken("riddler");
 
-        c.addChicken(c1);
-        c.addChicken(c2);
-
-        assertNotNull(c);
-
-
-    }
->>>>>>> coopstable
 }
