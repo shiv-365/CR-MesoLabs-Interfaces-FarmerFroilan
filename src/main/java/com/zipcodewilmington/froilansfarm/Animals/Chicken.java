@@ -6,10 +6,15 @@ import com.zipcodewilmington.froilansfarm.Interfaces.Produce;
 public class Chicken extends Animal implements Produce {
 
     private boolean hasBeenFertilized;
+    private String nameChicken;
 
     public Chicken(String name) {
         super(name);
+        this.nameChicken = name;
         this.hasBeenFertilized = false;
+    }
+    public Chicken(){
+
     }
 
     public String makeNoise(){
@@ -32,4 +37,14 @@ public class Chicken extends Animal implements Produce {
     public boolean isHasBeenFertilized() {
         return hasBeenFertilized;
     }
+
+    public void setNameChicken(String nameChicken){
+        this.nameChicken = nameChicken;
+    }
+    public String getNameChicken(){
+
+        return nameChicken;
+    }
+
+
 }

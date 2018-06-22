@@ -2,39 +2,42 @@ package com.zipcodewilmington.froilansfarm.Farm;
 
 import com.zipcodewilmington.froilansfarm.Animals.Chicken;
 
-import java.util.ArrayList;
 import java.util.TreeMap;
 
-public class Coop {
+public class Coop extends Chicken {
     private Chicken chick;
-    private String name;
-    private TreeMap<String,Chicken> oneCoop = new TreeMap<String,Chicken>();
-    public Coop(String name){
+    private String coopname;
+    public TreeMap<String,Chicken> oneCoop = new TreeMap<String,Chicken>();
+    private String Chickenname;
 
-        //this.chick = chick;
-        this.name = name;
+    public Coop (String name){
+        super(name);
 
+        this.coopname = name;
     }
-    public Coop(){}
-
-    public void setName(String name){
-
-        this.name = name;
+    public Coop(){
 
     }
 
-    public String getName(){
-        return name;
+
+    public void setName(String name){ //coop name
+
+        this.coopname = name;
 
     }
 
-    public void addChicken(Chicken c){
+    public String getName(){ //coop name
+        return coopname;
 
-        oneCoop.put(name,c);
     }
-    public Chicken getChicken() {
 
-              return  oneCoop.get(name);
+    public void addChicken(Chicken c){ //add chicken c to coop
+
+        oneCoop.put(getNameChicken(),c);
+    }
+    public Chicken getChicken(String name) {
+
+              return oneCoop.get(name);
     }
 
 }

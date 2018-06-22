@@ -8,24 +8,31 @@ class CoopTest {
 
 
 
-    /*@org.junit.jupiter.api.Test
+    @org.junit.jupiter.api.Test
     public void testgetChicken() {
-        Coop c = new Coop();
-        Chicken c1 = new Chicken("chicken1");
-        c.setName("chicken1");
+        Coop c = new Coop("thecoop");
+        Chicken c1 = new Chicken("billy");
+        Chicken c2 = new Chicken("booby");
+        //c.setName(c1.getName());
         c.addChicken(c1);
-        Chicken actual = c.getChicken();
-        Chicken expected = c1;
+        c.addChicken(c2);
+
+        //String name = "booby";
+        String actual = c2.getNameChicken();
+        String expected = "booby";
         assertEquals(expected,actual);
 
-//    }
+
+
+
+
+    }
 
     @org.junit.jupiter.api.Test
-<<<<<<< HEAD
     public void testaddChicken() {
-        Coop c = new Coop();
+        Coop c = new Coop("billy1");
 
 
-    }*/
+    }
 
 }
