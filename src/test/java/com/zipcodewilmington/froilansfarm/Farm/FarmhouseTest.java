@@ -1,12 +1,9 @@
 package com.zipcodewilmington.froilansfarm.Farm;
 
-import com.zipcodewilmington.froilansfarm.Interfaces.Edible;
-import com.zipcodewilmington.froilansfarm.Persons.Person;
-import com.zipcodewilmington.froilansfarm.crops.Corn;
 
+import com.zipcodewilmington.froilansfarm.Persons.Person;
 import static junit.framework.TestCase.assertTrue;
 import static org.junit.Assert.assertEquals;
-import static org.junit.jupiter.api.Assertions.*;
 
 class FarmhouseTest {
 
@@ -39,22 +36,25 @@ class FarmhouseTest {
         assertEquals(expected, actual);
     }
 
+
+    @org.junit.jupiter.api.Test
+    void addEdible() {
+        Farmhouse f = new Farmhouse();
+        f.addEdible("Corn", 100);
+        f.addEdible("Corn", 100);
+        int actual = f.getQuantity("Corn");
+        int expected = 200;
+        assertEquals(expected, actual);
+
+    }
+
     @org.junit.jupiter.api.Test
     void getEdible() {
         Farmhouse f = new Farmhouse();
-
-    }
-
-    @org.junit.jupiter.api.Test
-    void setEdible() {
-        Farmhouse f = new Farmhouse();
-        f.setEdible("Corn", new Corn());
-        Object actual = f.getEdible("Corn", 0);
-        assertTrue(actual instanceof Edible);
-
-    }
-
-    @org.junit.jupiter.api.Test
-    void removeEdible() {
+        f.addEdible("Eggs", 100);
+        f.getEdible("Eggs", 50);
+        int actual = f.getQuantity("Eggs");
+        int expected = 50;
+        assertEquals(expected, actual);
     }
 }
