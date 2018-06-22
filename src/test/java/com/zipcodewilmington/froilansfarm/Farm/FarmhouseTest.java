@@ -1,6 +1,8 @@
 package com.zipcodewilmington.froilansfarm.Farm;
 
+import com.zipcodewilmington.froilansfarm.Interfaces.Edible;
 import com.zipcodewilmington.froilansfarm.Persons.Person;
+import com.zipcodewilmington.froilansfarm.crops.Corn;
 
 import static junit.framework.TestCase.assertTrue;
 import static org.junit.Assert.assertEquals;
@@ -46,6 +48,9 @@ class FarmhouseTest {
     @org.junit.jupiter.api.Test
     void setEdible() {
         Farmhouse f = new Farmhouse();
+        f.setEdible("Corn", new Corn());
+        Object actual = f.getEdible("Corn", 0);
+        assertTrue(actual instanceof Edible);
 
     }
 

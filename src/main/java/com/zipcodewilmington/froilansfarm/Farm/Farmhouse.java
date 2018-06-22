@@ -5,6 +5,7 @@ import com.zipcodewilmington.froilansfarm.Interfaces.Edible;
 import com.zipcodewilmington.froilansfarm.Persons.Farmer;
 import com.zipcodewilmington.froilansfarm.Persons.Person;
 import com.zipcodewilmington.froilansfarm.Persons.Pilot;
+import com.zipcodewilmington.froilansfarm.crops.Corn;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -58,8 +59,8 @@ public class Farmhouse {
 
     public void setEdible(String name, Object[] o){
         ArrayList<Object> tempFood = fridge.get(name);
-        for(Object food: o){
-            tempFood.add(food);
+        for(int i = 0; i < o.length ; i++){
+            tempFood.add(i);
         }
         fridge.replace(name,tempFood);
     }
