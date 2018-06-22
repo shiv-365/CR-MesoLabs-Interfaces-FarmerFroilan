@@ -7,6 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class CoopTest {
 
 
+
     /*@org.junit.jupiter.api.Test
     public void testgetChicken() {
         Coop c = new Coop();
@@ -20,9 +21,23 @@ class CoopTest {
 //    }
 
     @org.junit.jupiter.api.Test
+<<<<<<< HEAD
     public void testaddChicken() {
         Coop c = new Coop();
 
 
     }*/
+=======
+    public void addChicken() {
+        Chicken c1 = new Chicken("joker");
+        Chicken c2 = new Chicken("riddler");
+
+        c.addChicken(c1);
+        c.addChicken(c2);
+
+        assertNotNull(c);
+
+
+    }
+>>>>>>> coopstable
 }
