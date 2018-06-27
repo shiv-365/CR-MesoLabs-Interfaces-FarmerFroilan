@@ -17,12 +17,16 @@ public abstract class Animal implements Eater, NoiseMaker {
     public Animal() {
     }
 
-    public void eat(Object[] e){
+    public boolean eat(Object[] e){
+        boolean wasItTasty = false;
         for(Object o: e) {
             if (o instanceof Edible) {
                 System.out.println("NOM NOM NOM");
-            } else System.out.println("THIS IS NOT FOOD!");
+                wasItTasty = true;
+            } else {
+                System.out.println("THIS IS NOT FOOD!"); }
         }
+        return wasItTasty;
     }
 
     public String getName() {

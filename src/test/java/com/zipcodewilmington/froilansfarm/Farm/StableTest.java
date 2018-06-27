@@ -1,20 +1,27 @@
 package com.zipcodewilmington.froilansfarm.Farm;
 
-import org.junit.jupiter.api.Test;
+import com.zipcodewilmington.froilansfarm.Animals.Horse;
+import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
 
-class StableTest {
+public class StableTest {
+
+    Stable test = new Stable("Horsey Town");
+    Horse horse1 = new Horse("Mr. Ed", test);
+    Horse horse2 = new Horse("SeaBiscuit", test);
 
     @Test
-    public void getHorse() {
+    public void getAddHorse() {
+        test.addHorse(horse1);
+        test.addHorse(horse2);
+        Horse proofOfConcept = test.getHorse("Mr. Ed");
+        assertTrue(proofOfConcept.equals(horse1));
     }
 
     @Test
-    public void getName() {
-    }
-
-    @Test
-    public void addHorse() {
+    public void setGetName() {
+        test.setName("New Horse Town");
+        assertTrue(test.getName() == "New Horse Town");
     }
 }

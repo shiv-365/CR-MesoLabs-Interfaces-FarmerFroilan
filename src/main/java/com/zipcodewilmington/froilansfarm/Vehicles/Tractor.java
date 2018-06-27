@@ -37,7 +37,11 @@ public class Tractor extends Vehicle implements FarmVehicle {
     }
 
     public String makeNoise() {
-        return "VROOOMMMM VRRRRROOOOOOMMMMM";
+        String noise = null;
+        if(operate == true) {
+            noise = "VROOOMMMM VRRRRROOOOOOMMMMM";
+        }
+        return noise;
     }
 
     public void ridden(Person p) {

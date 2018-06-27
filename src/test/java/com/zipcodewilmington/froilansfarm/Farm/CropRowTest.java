@@ -8,7 +8,7 @@ import static org.junit.Assert.*;
 
 public class CropRowTest {
 
-    CropRow testRow = new CropRow();
+    CropRow testRow = new CropRow(new Corn());
     Crop[] newTestRow = new Crop[0];
 
     @Test

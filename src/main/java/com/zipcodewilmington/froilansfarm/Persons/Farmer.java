@@ -24,6 +24,18 @@ public class Farmer extends Person  implements Botanist, Rider {
     }
 
 
+    public boolean isRiding() {
+        return riding;
+    }
+
+    public boolean isMounted() {
+        return mounted;
+    }
+
+    public Rideable getCurrentRide() {
+        return currentRide;
+    }
+
     public String easeThePain(){ //need beer class
         return "And I drank until I felt compelled to contact all of my exes on facebook...";
 

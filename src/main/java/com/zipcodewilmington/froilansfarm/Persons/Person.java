@@ -20,12 +20,15 @@ public class Person implements Eater, NoiseMaker {
         return name;
     }
 
-    public void eat(Object[] e){
+    public boolean eat(Object[] e){
+        boolean wasItTasty = false;
         for(Object o: e) {
             if (o instanceof Edible) {
                 System.out.println("NOM NOM NOM");
+                wasItTasty = true;
             } else System.out.println("THIS IS NOT FOOD!");
         }
+        return wasItTasty;
     }
 
     public String makeNoise() {

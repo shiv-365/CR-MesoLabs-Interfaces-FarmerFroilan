@@ -39,6 +39,26 @@ public class Pilot extends Person implements Flys, Rider {
         }
     }
 
+    public boolean isFlying() {
+        return flying;
+    }
+
+    public boolean isRiding() {
+        return riding;
+    }
+
+    public boolean isMounted() {
+        return mounted;
+    }
+
+    public Rideable getCurrentRide() {
+        return currentRide;
+    }
+
+    public Flyable getCurrentAircraft() {
+        return currentAircraft;
+    }
+
     public void stopFlying(Aircraft a) {
         a.land();
         this.currentAircraft = null;
@@ -70,7 +90,7 @@ public class Pilot extends Person implements Flys, Rider {
     }
 
     public String makeNoise() {
-        return "Vroom Vroom!";
+        return "To The Big Blue Yonder!";
     }
 
     public void mount(Rideable ride) {

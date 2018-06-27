@@ -1,43 +1,39 @@
 package com.zipcodewilmington.froilansfarm.Animals;
 
-import org.junit.After;
-import org.junit.Before;
+import com.zipcodewilmington.froilansfarm.Farm.Stable;
 import org.junit.Test;
-
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
 
 import static org.junit.Assert.*;
 
 public class AnimalTest {
+    Stable testStable = new Stable("Test Stable");
+    Animal testHorse = new Horse("Mr. Ed", testStable);
+    Object[] tastyGoodness = new Object[]{new Egg(), new Egg()};
+    Object[] noBueno = new Object[] {1,2,3};
 
-//    private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-//    private final PrintStream originalOut = System.out;
-//    Animal testAnimal = new Horse("Mr. Ed");
-//    Object[] goodFood = new Object[]{new Egg()};
-//    Object[] badFood = new Object[]{new Object()};
-//
-//
-//    @Before
-//    public void setUpStreams() {
-//        System.setOut(new PrintStream(outContent));
-//    }
-//
-//
-//    @Test
-//    public void eat() {
-//        testAnimal.eat(goodFood);
-//        assertEquals(outContent.toString(),"NOM NOM NOM");
-//    }
-//
-//    @Test
-//    public void eat1() {
-//        testAnimal.eat(badFood);
-//        assertEquals(outContent.toString(),"THIS IS NOT FOOD!");
-//    }
-//
-//    @After
-//    public void restoreStreams() {
-//        System.setOut(originalOut);
-//    }
+
+    @Test
+    public void goodEats() {
+       assertTrue(testHorse.eat(tastyGoodness));
+    }
+
+    @Test
+    public void badEats() {
+        assertFalse(testHorse.eat(noBueno));
+    }
+
+    @Test
+    public void getName() {
+        String expected = "Mr. Ed";
+        String actual = testHorse.getName();
+        assertEquals(expected,actual);
+    }
+
+    @Test
+    public void setName() {
+        testHorse.setName("SeaBiscuit");
+        String expected = "SeaBiscuit";
+        String actual = testHorse.getName();
+        assertEquals(expected,actual);
+    }
 }

@@ -7,9 +7,7 @@ import com.zipcodewilmington.froilansfarm.Persons.Person;
 import com.zipcodewilmington.froilansfarm.Persons.Pilot;
 import com.zipcodewilmington.froilansfarm.crops.Crop;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.TreeMap;
+import java.util.*;
 
 public class CropDuster extends Aircraft implements FarmVehicle {
 
@@ -54,13 +52,9 @@ public class CropDuster extends Aircraft implements FarmVehicle {
     }
     public void stopOperate() {this.operating = false;}
 
-    public void fertilize(TreeMap<Crop, CropRow> field){
-        Collection<CropRow> crops = field.values();
-        for(CropRow c : crops){
-             Crop[] tempCrop = c.getCropRow();
-             for(Crop crop: tempCrop){
-                 crop.fertilized();
-             }
-        }
-    }
+    public void fertilize(CropRow cropRow){
+            for(int i = 0; i < cropRow.getCropRowSize(); i++)
+                cropRow.getCropFromRow(i).fertilized();
+          }
+
 }

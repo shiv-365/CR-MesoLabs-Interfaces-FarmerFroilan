@@ -12,4 +12,7 @@ public abstract class Crop implements Produce, Edible {
         hasBeenFertilized = true;
     }
 
+    public boolean isHasBeenFertilized() {
+        return hasBeenFertilized;
+    }
 }

@@ -15,7 +15,11 @@ public abstract class Aircraft extends Vehicle implements Flyable {
     }
 
     public String makeNoise(){
-        return "NYRRRRRRRRRRMMMMMMMMMMM";
+        String noise = null;
+        if(this.pilot != null && this.flying == true) {
+            noise = "NYRRRRRRRRRRMMMMMMMMMMM";
+        } else { noise = "whoomp whoomp";}
+        return noise;
     }
 
     public void fly(Person person){

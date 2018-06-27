@@ -2,29 +2,24 @@ package com.zipcodewilmington.froilansfarm.Farm;
 
 import com.zipcodewilmington.froilansfarm.Persons.Farmer;
 import com.zipcodewilmington.froilansfarm.Persons.Person;
-import com.zipcodewilmington.froilansfarm.crops.Corn;
-import com.zipcodewilmington.froilansfarm.crops.Crop;
-import com.zipcodewilmington.froilansfarm.crops.Cucumber;
+import com.zipcodewilmington.froilansfarm.crops.*;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.TreeMap;
 
 public class Farm {
 
     Farmhouse saison = new Farmhouse();
-    TreeMap<Crop, CropRow> field = new TreeMap<Crop, CropRow>();
-    ArrayList<Stable> horseyFarm = new ArrayList<Stable>();
-    ArrayList<Coop> chickenCity = new ArrayList<Coop>();
+    TreeMap<String, CropRow> field = new TreeMap<String, CropRow>();
+    TreeMap<String ,Stable> horseyFarm = new TreeMap<>();
+    TreeMap<String ,Coop> chickenCity = new TreeMap<>();
 
-
-
-
-    
     public Farmhouse getSaison() {
         return saison;
     }
 
-    public TreeMap<Crop, CropRow> getField() {
+    public TreeMap<String, CropRow> getField() {
         return field;
     }
 
@@ -32,24 +27,43 @@ public class Farm {
             return saison.froilan;
     }
 
-    public void setField(TreeMap<Crop, CropRow> field) {
+    public void setField(TreeMap<String, CropRow> field) {
         this.field = field;
     }
 
-    public ArrayList<Stable> getHorseyFarm() {
+    public TreeMap<String ,Stable> getHorseyFarm() {
         return horseyFarm;
     }
 
-    public void setHorseyFarm(ArrayList<Stable> horseyFarm) {
-        this.horseyFarm = horseyFarm;
-    }
-
-    public ArrayList<Coop> getChickenCity() {
+    public TreeMap<String ,Coop> getChickenCity() {
         return chickenCity;
     }
 
-    public void setChickenCity(ArrayList<Coop> chickenCity) {
-        this.chickenCity = chickenCity;
+    public Coop getCoop (String coopName) {
+        return chickenCity.get(coopName);
     }
 
+    public Stable getStable (String stableName) {
+        return horseyFarm.get(stableName);
+    }
+
+    public void addCoop(Coop coop) {
+        chickenCity.put(coop.getName(), coop);
+    }
+
+    public void addStable(Stable stable) {
+        horseyFarm.put(stable.getName(), stable);
+    }
+
+    public void fieldSetup() {
+        field.put("Corn" , new CropRow(new Corn()));
+        field.put("Tomato" , new CropRow(new Tomato()));
+        field.put("Potato" , new CropRow(new Potato()));
+        field.put("Cucumber" , new CropRow(new Cucumber()));
+        field.put("Soy Bean" , new CropRow(new SoyBean()));
+    }
+
+    public CropRow getCropRowFromField(String cropName){
+        return field.get(cropName);
+    }
 }

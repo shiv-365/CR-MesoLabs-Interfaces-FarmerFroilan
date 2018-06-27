@@ -1,32 +1,28 @@
 package com.zipcodewilmington.froilansfarm.Farm;
 
 import com.zipcodewilmington.froilansfarm.Animals.Chicken;
+import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
 
-class CoopTest {
+public class CoopTest {
+    Coop test = new Coop("Chicken City");
+    Chicken chicken1 = new Chicken("Chicken 1", test);
+    Chicken chicken2 = new Chicken("Chicken 2", test);
 
-//
-//    @org.junit.jupiter.api.Test
-//    public void testgetChicken() {
-//        Coop c = new Coop("thecoop");
-//        Chicken c1 = new Chicken("billy");
-//        Chicken c2 = new Chicken("booby");
-//        //c.setName(c1.getName());
-//        c.addChicken(c1);
-//        c.addChicken(c2);
-//
-//        //String name = "booby";
-//        String actual = c2.getNameChicken();
-//        String expected = "booby";
-//        assertEquals(expected,actual);
-//    }
-//
-//    @org.junit.jupiter.api.Test
-//    public void testaddChicken() {
-//        Coop c = new Coop("billy1");
-//
-//
-//    }
+
+    @Test
+    public void getChicken() {
+        test.addChicken(chicken1);
+        test.addChicken(chicken2);
+        Chicken tester = test.getChicken("Chicken 1");
+        assertTrue(tester == chicken1);
+    }
+
+    @Test
+    public void setGetName() {
+        test.setName("NEW CHICKEN CITY");
+        assertTrue(test.getName() == "NEW CHICKEN CITY");
+    }
 
 }

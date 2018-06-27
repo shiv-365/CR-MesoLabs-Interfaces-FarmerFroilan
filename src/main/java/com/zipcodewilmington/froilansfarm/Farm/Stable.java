@@ -9,7 +9,7 @@ public class Stable {
     private String name;
     private TreeMap<String,Horse> horseList = new TreeMap<String,Horse>();
 
-    public Stable(String name, Horse horse){
+    public Stable(String name){
         this.name = name;
     }
 

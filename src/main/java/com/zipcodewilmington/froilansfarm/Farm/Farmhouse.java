@@ -57,13 +57,17 @@ public class Farmhouse {
         fridge.replace(name, getQuantity(name) + amount);
     }
 
-    public void getEdible(String name, int amount) {
+    public Object[] getEdible(String name, int amount) {
+        Edible[] tastyTreats = new Edible[amount];
         if (getQuantity(name) >= amount) {
             fridge.replace(name, (getQuantity(name) - amount));
+            for(int i = 0; i < amount; i++){
+                tastyTreats[i] = new Corn();
+            }
         } else {
             System.out.println("Not enough available, you only have " + getQuantity(name) + " " + name + " available!");
         }
+        return tastyTreats;
     }
-
 
 }
