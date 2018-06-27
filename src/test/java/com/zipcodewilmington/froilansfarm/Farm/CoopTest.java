@@ -7,7 +7,6 @@ import static org.junit.jupiter.api.Assertions.*;
 class CoopTest {
 
 
-
     @org.junit.jupiter.api.Test
     public void testgetChicken() {
         Coop c = new Coop("thecoop");
@@ -21,11 +20,6 @@ class CoopTest {
         String actual = c2.getNameChicken();
         String expected = "booby";
         assertEquals(expected,actual);
-
-
-
-
-
     }
 
     @org.junit.jupiter.api.Test
