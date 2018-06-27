@@ -7,30 +7,27 @@ import java.util.TreeMap;
 
 public class Stable {
     private String name;
-    private Horse horseys;
-    private TreeMap<String,Horse> oneStable = new TreeMap<String,Horse>();
+    private TreeMap<String,Horse> horseList = new TreeMap<String,Horse>();
 
     public Stable(String name, Horse horse){
-
-        this.horseys = horse;
         this.name = name;
     }
 
-    public Horse getHorse(){
-
-        return horseys;
+    public Horse getHorse(String horseName){
+        return horseList.get(horseName);
     }
     public void setName(String name){
         this.name = name;
     }
+
     public String getName(){
 
         return name;
     }
 
-    public void addHorse(){
+    public void addHorse(Horse horse){
 
-        oneStable.put(name, horseys);
+        horseList.put(horse.getName(), horse);
     }
 
 

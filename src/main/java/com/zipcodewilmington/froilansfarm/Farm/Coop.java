@@ -6,20 +6,17 @@ import java.util.ArrayList;
 import java.util.TreeMap;
 
 public class Coop {
-    private Chicken chick;
     private String name;
-    private TreeMap<String,Chicken> oneCoop = new TreeMap<String,Chicken>();
-    public Coop(String name, Chicken chick){
+    private TreeMap<String,Chicken> chickenList = new TreeMap<String,Chicken>();
 
-        this.chick = chick;
+    public Coop(String name){
         this.name = name;
 
     }
-    public Coop(){}
 
-    public Chicken getChicken(){
+    public Chicken getChicken(String name){
 
-        return chick;
+        return chickenList.get(name);
     }
 
 
@@ -33,9 +30,9 @@ public class Coop {
         return name;
 
     }
-    public void addChicken(){
+    public void addChicken(Chicken chicken){
 
-        oneCoop.put(name,chick);
+        chickenList.put(chicken.getName(), chicken);
     }
 
 

@@ -3,8 +3,8 @@ package com.zipcodewilmington.froilansfarm.crops;
 import com.zipcodewilmington.froilansfarm.Interfaces.Edible;
 
 public class Tomato extends Crop {
-    public Edible yield() {
-        Edible tomato = new Tomato();
+    public Tomato yield() {
+        Tomato tomato = new Tomato();
         return tomato;
     }
 

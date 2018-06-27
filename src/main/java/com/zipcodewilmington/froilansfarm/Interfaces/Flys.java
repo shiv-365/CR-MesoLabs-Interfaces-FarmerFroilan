@@ -1,5 +1,7 @@
 package com.zipcodewilmington.froilansfarm.Interfaces;
 
+import com.zipcodewilmington.froilansfarm.Vehicles.Aircraft;
+
 public interface Flys {
-    void flying();
+    void fly(Aircraft a);
 }

@@ -1,6 +1,11 @@
 package com.zipcodewilmington.froilansfarm.Farm;
 
+import com.zipcodewilmington.froilansfarm.Persons.Farmer;
+import com.zipcodewilmington.froilansfarm.Persons.Person;
+import com.zipcodewilmington.froilansfarm.crops.Corn;
 import com.zipcodewilmington.froilansfarm.crops.Crop;
+import com.zipcodewilmington.froilansfarm.crops.Cucumber;
+
 import java.util.ArrayList;
 import java.util.TreeMap;
 
@@ -10,6 +15,10 @@ public class Farm {
     TreeMap<Crop, CropRow> field = new TreeMap<Crop, CropRow>();
     ArrayList<Stable> horseyFarm = new ArrayList<Stable>();
     ArrayList<Coop> chickenCity = new ArrayList<Coop>();
+
+
+
+
     
     public Farmhouse getSaison() {
         return saison;
@@ -17,6 +26,10 @@ public class Farm {
 
     public TreeMap<Crop, CropRow> getField() {
         return field;
+    }
+
+    public Person getFarmer(){
+            return saison.froilan;
     }
 
     public void setField(TreeMap<Crop, CropRow> field) {

@@ -32,7 +32,4 @@ public class Person implements Eater, NoiseMaker {
         return "I'm Batman";
     }
 
-    public void eat(Object e) { //what is this bullshit
-
-    }
 }

@@ -3,6 +3,8 @@ package com.zipcodewilmington.froilansfarm.Vehicles;
 import com.zipcodewilmington.froilansfarm.Farm.CropRow;
 import com.zipcodewilmington.froilansfarm.Farm.Farm;
 import com.zipcodewilmington.froilansfarm.Interfaces.FarmVehicle;
+import com.zipcodewilmington.froilansfarm.Persons.Person;
+import com.zipcodewilmington.froilansfarm.Persons.Pilot;
 import com.zipcodewilmington.froilansfarm.crops.Crop;
 
 import java.util.ArrayList;
@@ -17,26 +19,40 @@ public class CropDuster extends Aircraft implements FarmVehicle {
         super.isRidden = false;
         this.operating = false;
         super.flying = false;
-        super.hasPilot = false;
+        super.pilot = null;
     }
 
-    public void ridden(){
+    public void ridden(Person p){
         if(this.isRidden == false){
             this.isRidden = true;
         } else System.out.println( "Sorry this CropDuster is currently unavailable to fly");
     }
 
-    public void fly() {
-        operate();
-        this.flying = true;
-        this.hasPilot = true;
-        ridden();
-        super.makeNoise();
+    public void notRidden(){
+        this.isRidden = false;
     }
 
-    public void operate(){
+    public void fly(Person p) {
+       if(p instanceof Pilot) {
+           operate(p);
+           ridden(p);
+           super.pilot = p;
+           this.flying = true;
+           super.makeNoise();
+       }
+    }
+
+    public void land(){
+        notRidden();
+        stopOperate();
+        this.pilot = null;
+        this.flying = false;
+    }
+
+    public void operate(Person p){
         this.operating = true;
     }
+    public void stopOperate() {this.operating = false;}
 
     public void fertilize(TreeMap<Crop, CropRow> field){
         Collection<CropRow> crops = field.values();
