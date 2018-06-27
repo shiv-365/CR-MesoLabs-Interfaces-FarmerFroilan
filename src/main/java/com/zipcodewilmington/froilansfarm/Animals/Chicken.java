@@ -7,12 +7,18 @@ import com.zipcodewilmington.froilansfarm.Interfaces.Produce;
 public class Chicken extends Animal implements Produce {
 
     private boolean hasBeenFertilized;
+
     Coop home;
+    private String nameChicken;
 
     public Chicken(String name, Coop coop) {
         super(name);
+        this.nameChicken = name;
         this.hasBeenFertilized = false;
         this.home = coop;
+    }
+    public Chicken(){
+
     }
 
     public String makeNoise(){
@@ -35,4 +41,14 @@ public class Chicken extends Animal implements Produce {
     public boolean isHasBeenFertilized() {
         return hasBeenFertilized;
     }
+
+    public void setNameChicken(String nameChicken){
+        this.nameChicken = nameChicken;
+    }
+    public String getNameChicken(){
+
+        return nameChicken;
+    }
+
+
 }

@@ -4,12 +4,17 @@ import com.zipcodewilmington.froilansfarm.Interfaces.Eater;
 import com.zipcodewilmington.froilansfarm.Interfaces.Edible;
 import com.zipcodewilmington.froilansfarm.Interfaces.NoiseMaker;
 
+import java.security.PublicKey;
+
 public abstract class Animal implements Eater, NoiseMaker {
 
-    String name;
+   private String name;
 
     public Animal(String name) {
         this.name = name;
+    }
+
+    public Animal() {
     }
 
     public void eat(Object[] e){
@@ -22,5 +27,8 @@ public abstract class Animal implements Eater, NoiseMaker {
 
     public String getName() {
         return name;
+    }
+    public void setName(String name){
+        this.name = name;
     }
 }
